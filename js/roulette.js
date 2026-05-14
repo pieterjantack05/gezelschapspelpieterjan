@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultScreen = document.getElementById('result-screen');
     const startBtn = document.getElementById('start-btn');
     const difficultyBtns = document.querySelectorAll('.difficulty-btn');
-    const tryAgainBtn = document.getElementById('try-again-btn');
     const canvas = document.getElementById('roulette-canvas');
     const ctx = canvas.getContext('2d');
     const video = document.getElementById('result-video');
@@ -150,13 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
             isSpinning = true;
             spin();
         });
-    });
-
-    tryAgainBtn.addEventListener('click', () => {
-        resultScreen.style.display = 'none';
-        choiceScreen.style.display = 'flex';
-        video.pause();
-        audio.pause();
     });
 
     document.addEventListener('keydown', (e) => {
