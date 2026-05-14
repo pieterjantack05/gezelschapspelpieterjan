@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameScreen = document.getElementById('game-screen');
     const resultScreen = document.getElementById('result-screen');
     const startBtn = document.getElementById('start-btn');
-    const difficultyBtns = document.querySelectorAll('.difficulty-btn');
+    const difficultyBtns = document.querySelectorAll('#choice-screen .difficulty-btn');
     const canvas = document.getElementById('roulette-canvas');
     const ctx = canvas.getContext('2d');
     const video = document.getElementById('result-video');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const difficulties = [
         { green: 0.7, speed: 0.04, name: "Makkelijk" },
         { green: 0.5, speed: 0.08, name: "Iets moeilijker" },
-        { green: 0.3, speed: 0.12, name: "Gevorderd" }
+        { green: 0.3, speed: 0.063, name: "Gevorderd" }
     ];
 
     function drawRoulette() {
@@ -152,7 +152,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    stopBtn.addEventListener('click', stopSpin);
+    stopBtn.addEventListener('click', () => {
+        if (isSpinning) {
+            stopSpin();
+        }
+    });
 
     document.addEventListener('keydown', (e) => {
         if (e.code === 'Space' && isSpinning) {

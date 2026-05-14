@@ -250,6 +250,12 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #c084fc;
 }
 
+#stop-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 10px auto;
+}
+
 #game-screen p {
     margin: 20px 0;
     font-size: 18px;
@@ -266,8 +272,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 #result-screen video, #result-screen audio {
     margin: 20px 0;
-    width: 80%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 260px;
     height: auto;
 }
 
