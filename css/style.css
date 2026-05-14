@@ -11,17 +11,12 @@ body {
     background-repeat: no-repeat;
 }
 
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-right: 20px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 .large-box {
     width: 200px;
     height: 200px;
-    background-color: #4CAF50;
+    background-color: #a855f7;
     color: white;
     display: flex;
     justify-content: center;
@@ -30,11 +25,12 @@ body {
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
     transition: background-color 0.3s;
 }
 
 .large-box:hover {
-    background-color: #45a049;
+    background-color: #c084fc;
 }
 
 .main {
@@ -47,14 +43,15 @@ body {
 .box {
     width: 100px;
     height: 100px;
-    background-color: #4CAF50;
+    background-color: #a855f7;
     border-radius: 10px;
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .box:hover {
-    background-color: #45a049;
+    background-color: #c084fc;
 }
 
 .box.clicked {
@@ -69,6 +66,7 @@ body {
     border-radius: 14px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .choice-panel {
@@ -84,17 +82,18 @@ body {
     padding: 14px 20px;
     border: none;
     border-radius: 10px;
-    background-color: #4CAF50;
+    background-color: #a855f7;
     color: white;
     font-size: 16px;
     font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .choice-button:hover,
 .choice-button:focus {
-    background-color: #45a049;
+    background-color: #c084fc;
 }
 
 .roulette-panel {
@@ -198,20 +197,22 @@ body {
 #start-screen button, #result-screen button {
     padding: 15px 30px;
     font-size: 18px;
-    background-color: #4CAF50;
+    background-color: #a855f7;
     color: white;
     border: none;
     border-radius: 10px;
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 #start-screen button:hover, #result-screen button:hover {
-    background-color: #45a049;
+    background-color: #c084fc;
 }
 
 #choice-screen h2 {
     margin-bottom: 20px;
+    font-family: 'Permanent Marker', cursive;
 }
 
 .difficulty-btn {
@@ -219,16 +220,17 @@ body {
     margin: 10px;
     padding: 15px 30px;
     font-size: 18px;
-    background-color: #4CAF50;
+    background-color: #a855f7;
     color: white;
     border: none;
     border-radius: 10px;
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .difficulty-btn:hover {
-    background-color: #45a049;
+    background-color: #c084fc;
 }
 
 #game-screen p {
@@ -247,4 +249,96 @@ body {
 
 #result-screen button {
     margin: 10px;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 20px;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .large-box {
+        width: 100%;
+        max-width: 320px;
+        height: 160px;
+        margin: 0 auto;
+    }
+
+    .main {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .box {
+        width: 100%;
+        height: 100px;
+    }
+
+    .page-container {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .choice-button,
+    .difficulty-btn,
+    #start-screen button,
+    #result-screen button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    #game-screen {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    #roulette-canvas {
+        width: min(100%, 400px);
+        height: auto;
+    }
+
+    .wheel-container {
+        width: min(100%, 320px);
+        height: min(100%, 320px);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        justify-content: flex-start;
+    }
+
+    .sidebar {
+        gap: 14px;
+    }
+
+    .large-box {
+        height: 140px;
+        font-size: 16px;
+    }
+
+    .main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .box {
+        height: 90px;
+    }
+
+    .wheel-container {
+        width: min(100%, 280px);
+        height: min(100%, 280px);
+    }
+
+    #game-screen p,
+    #result-screen p {
+        font-size: 16px;
+        margin: 14px 0;
+    }
 }

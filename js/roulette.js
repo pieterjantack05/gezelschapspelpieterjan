@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const resultText = document.getElementById('result-text');
         if (isGreen) {
-            resultText.textContent = "Proficiat! U mag het artefact in je rugzak leggen.";
+            resultText.textContent = "Proficiat! Je mag het artefact in je rugzak leggen.";
             video.pause();
             video.currentTime = 0;
             video.src = 'assets/42.mp4';
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
             audio.currentTime = 0;
             audio.src = 'assets/happycat.wav';
         } else {
-            resultText.textContent = "Jammer! U hebt het artefact niet gestolen.";
+            resultText.textContent = "Jammer... De beurt gaat naar de volgende speler";
             video.pause();
             video.currentTime = 0;
             video.src = 'assets/Fireball_1_2kres.mp4';
