@@ -194,7 +194,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* New styles for the new roulette */
-#start-screen, #choice-screen, #game-screen, #result-screen {
+#start-screen, #choice-screen, #game-screen, #difficulty-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#result-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
