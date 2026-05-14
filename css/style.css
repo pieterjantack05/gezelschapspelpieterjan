@@ -266,6 +266,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 #result-screen video, #result-screen audio {
     margin: 20px 0;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
 }
 
 #result-screen button {
@@ -311,6 +314,9 @@ h1, h2, h3, h4, h5, h6, p {
     #result-screen button {
         width: 100%;
         max-width: 320px;
+        padding: 20px 30px;
+        font-size: 20px;
+        min-height: 60px;
     }
 
     #game-screen {

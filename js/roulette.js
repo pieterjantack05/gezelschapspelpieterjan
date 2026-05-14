@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     const video = document.getElementById('result-video');
     const audio = document.getElementById('result-audio');
+    const stopBtn = document.getElementById('stop-btn');
 
     let isSpinning = false;
     let angle = 0;
@@ -151,6 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    stopBtn.addEventListener('click', stopSpin);
+
     document.addEventListener('keydown', (e) => {
         if (e.code === 'Space' && isSpinning) {
             e.preventDefault();
@@ -158,6 +161,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-stopButton.addEventListener('click', stopRoulette);
-wheel.addEventListener('click', stopRoulette);
